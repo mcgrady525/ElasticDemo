@@ -16,7 +16,7 @@ namespace ElasticDemo.NEST
         static Program()
         {
             //创建es连接，使用SingleNodeConnectionPool
-            var uri = new Uri("http://192.168.1.40:9200");
+            var uri = new Uri("http://192.168.1.34:9200");
             var pool = new SingleNodeConnectionPool(uri);
             var settings = new ConnectionSettings(pool).DefaultIndex("people");
             client = new ElasticClient(settings);
